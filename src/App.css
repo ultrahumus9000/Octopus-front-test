@@ -1,22 +1,136 @@
 .App {
   text-align: center;
+  color: var(--text);
+  height: 100vh;
+  position: relative;
+  overflow: scroll;
+}
+h3 {
+  font-weight: bolder;
 }
 :root {
   --dark-blue-backgroud: #110030;
   --light-blue-backgroud: #180048;
+  --text: white;
+  --light-text: rgb(179, 174, 174);
 }
-.App-header {
+footer {
+  background-color: var(--light-blue-backgroud);
+  font-size: 0.7rem;
+  padding: 10px;
+}
+.products-display-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 5px;
+  background-color: var(--light-blue-backgroud);
+}
+.main-header {
   padding: 1rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
   background-color: var(--dark-blue-backgroud);
+  color: var(--text);
+  position: sticky;
+  width: 100vw;
+  top: 0px;
 }
 
-.App-header img {
+.main-header img {
   height: 2rem;
 }
 .shopping-cart {
-  fill: white;
   justify-self: end;
+  position: relative;
+}
+.total-quantity {
+  background-color: indianred;
+  padding: 3px 8px;
+  border-radius: 50px;
+  position: absolute;
+  right: -1rem;
+}
+.product {
+  border: 2px dashed white;
+}
+.product-image {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+.product-overview,
+.product-description {
+  background-color: var(--light-blue-backgroud);
+}
+.product-description p {
+  max-width: 40ch;
+}
+
+.product-spec,
+.product-cart {
+  background-color: var(--dark-blue-backgroud);
+}
+.product-name {
+  font-weight: bolder;
+}
+.product-set {
+  color: var(--light-text);
+  font-size: small;
+}
+.product div {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  place-content: center;
+}
+
+.product-spec li {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: left;
+  padding: 5px;
+}
+.product-spec li span {
+  color: beige;
+  justify-self: end;
+}
+.product-cart section {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+  align-items: center;
+}
+.product-cart button {
+  margin: 0px 5px;
+  background-color: none;
+  border: none;
+  border-radius: 5px;
+}
+.increase-btn {
+  padding: 4px 8px;
+  background-color: slateblue;
+}
+.decrease-btn {
+  padding: 4px 8px;
+  background-color: rgb(65, 97, 98);
+}
+.add-btn {
+  background: linear-gradient(180deg, pink, rgb(212, 36, 168), pink);
+  color: var(--text);
+  font-weight: bolder;
+  padding: 10px 20px;
+}
+.product-cart button span {
+  font-size: 1.2rem;
+}
+.product-cart button:hover,
+.product-cart button:active {
+  filter: brightness(1.2);
+}
+
+@media screen and (max-width: 600px) {
+  .product {
+    border: none;
+  }
 }
