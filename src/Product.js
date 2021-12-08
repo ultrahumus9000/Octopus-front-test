@@ -14,8 +14,6 @@ export default function Product({
     qty: 1,
   });
 
-  console.log("17", tempShoppingItem, singleQty);
-  console.log(" shoppingCart", shoppingCart);
   const increaseQty = () => {
     setSingleQty(singleQty + 1);
     setTempShoppingItem({ ...tempShoppingItem, qty: tempShoppingItem.qty + 1 });
@@ -55,7 +53,6 @@ export default function Product({
     }
   };
 
-  //   console.log("shoppingCart", shoppingCart);
   return (
     <div className="product">
       <div className="product-overview">

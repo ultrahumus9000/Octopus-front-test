@@ -124,10 +124,10 @@ function App() {
             path="/shopping-cart"
             element={
               <Cart
+                shoppingCart={shoppingCart}
+                setShoppingCart={setShoppingCart}
                 totalCartQty={totalCartQty}
                 setTotalCartQty={setTotalCartQty}
-                shoppingCart={setShoppingCart}
-                setShoppingCart={setShoppingCart}
               />
             }
           />
