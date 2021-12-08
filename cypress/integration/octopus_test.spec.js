@@ -19,5 +19,6 @@ describe("My First Test", () => {
     cy.visit("localhost:3000");
     cy.get(".add-btn").first().click();
     cy.get(".total-quantity").should("be.visible");
+    //cart items will appear on the screen once add to cart button is clicked
   });
 });
