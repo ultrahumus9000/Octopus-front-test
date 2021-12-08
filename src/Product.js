@@ -68,7 +68,7 @@ export default function Product({
             {" "}
             <span> -</span>
           </button>
-          <span>{singleQty}</span>
+          <span className="qty">{singleQty}</span>
           <button className="increase-btn" onClick={increaseQty}>
             {" "}
             <span> +</span>
