@@ -14,7 +14,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+Test
+I created an automated test by cypress, to run these test, please follow instructions below
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm install cypress --save-dev`
+
+### `npm install eslint-plugin-cypress --save-dev`
+
+### `npx cypress open`
